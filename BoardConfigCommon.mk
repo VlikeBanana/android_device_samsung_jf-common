@@ -34,6 +34,9 @@ BOARD_KERNEL_PAGESIZE        := 2048
 TARGET_KERNEL_VARIANT_CONFIG := cyanogen_jf_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 
+# Build with arm-eabi-4.6 for kernel
+TARGET_KERNEL_CUSTOM_LINARO_TOOLCHAIN := arm-eabi-4.6/bin/arm-eabi-
+
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Recovery
