@@ -149,9 +149,6 @@
     <!-- Boolean indicating whether the wifi chipset has dual frequency band support -->
     <bool translatable="false" name="config_wifi_dual_band_support">true</bool>
 
-    <!-- Boolean indicating whether the wifi chipset has p2p support -->
-    <bool translatable="false" name="config_wifi_p2p_support">true</bool>
-
     <!-- Boolean indicating whether the wifi chipset has background scan support -->
     <bool translatable="false" name="config_wifi_background_scan_support">false</bool>
 
@@ -230,7 +227,17 @@
     <!-- Disable the home key unlock setting -->
     <bool name="config_disableHomeUnlockSetting">false</bool>
 
-    <bool name="config_enableWifiDisplay">true</bool>
+    <!-- Hardware 'face' keys present on the device, stored as a bit field.
+         This integer should equal the sum of the corresponding value for each
+         of the following keys present:
+             1 - Home
+             2 - Back
+             4 - Menu
+             8 - Assistant (search)
+            16 - App switch
+         For example, a device with Home, Back and Menu keys would set this
+         config to 7. -->
+    <integer name="config_deviceHardwareKeys">7</integer>
 
     <!-- Panel auto-brightness configuration value -->
     <integer name="config_panelAutoBrightnessValue">1</integer>
@@ -239,6 +246,11 @@
     for a custom path the delivered kernel supports.
     it is disabled by default so devices need to add an overlay to enable -->
     <string name="config_fastChargePath" translatable="false">/sys/kernel/fast_charge/force_fast_charge</string>
+
+    <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- Panel auto-brightness configuration value -->
+    <integer name="config_panelAutoBrightnessValue">1</integer>
 
     <!-- True if the Irda service should be started at system start. This currently only
          supports Samsung Galaxy S4. -->
