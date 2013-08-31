@@ -37,6 +37,9 @@ TARGET_KERNEL_SELINUX_CONFIG := jfselinux_defconfig
 # Build with arm-eabi-4.6 for kernel
 TARGET_KERNEL_CUSTOM_LINARO_TOOLCHAIN := arm-eabi-4.6/bin/arm-eabi-
 
+# target gcc for Camera purposes
+TARGET_GCC_VERSION_EXP := 4.6
+
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Recovery
