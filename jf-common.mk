@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2011 The CyanogenMod Project
+# Copyright (C) 2013 The CyanogenMod Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -149,7 +149,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ehrpd=true \
     persist.omh.enabled=1 \
     persist.data_netmgrd_nint=16 \
-    lpa.decode=true \
+    lpa.decode=false \
+    tunnel.decode=true \
+    tunnel.audiovideo.decode=true \
     rild.libpath=/system/lib/libril-qc-qmi-1.so \
     ril.subscription.types=NV,RUIM \
     ro.cdma.subscribe_on_ruim_ready=true \
